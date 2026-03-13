@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Qize</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="quiz-page">
+    <!-- Animated gradient mesh background -->
+    <div class="mesh-background">
+        <div class="mesh-blob mesh-blob-1"></div>
+        <div class="mesh-blob mesh-blob-2"></div>
+        <div class="mesh-blob mesh-blob-3"></div>
+        <div class="mesh-blob mesh-blob-4"></div>
+    </div>
+
+    <!-- 3D background elements -->
+    <div class="quiz-background">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <div class="score-display">
+                <span class="score-label">ලකුණු</span>
+                <span class="score-value" id="score">0</span>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span class="progress-text" id="progress-text">1/10</span>
+            </div>
+            <button class="home-btn" id="home-btn">
+                <svg viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="currentColor" d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+                </svg>
+            </button>
+        </header>
+
+        <main class="quiz-main">
+            <div class="quiz-card" id="quiz-card">
+                <div class="question-container" id="question-container">
+                    <div class="category-badge" id="category-badge">BIOLOGY</div>
+                    <h2 class="question-text" id="question-text">ප්‍රශ්නය ලබා ගන්නා අතර...</h2>
+                </div>
+
+                <div class="options-container" id="options-container">
+                    <!-- Options will be injected here -->
+                </div>
+
+                <div class="explanation-container" id="explanation-container" style="display: none;">
+                    <div class="explanation-box" id="explanation-box">
+                        <div class="explanation-icon" id="explanation-icon"></div>
+                        <div class="explanation-content">
+                            <h3 class="explanation-title" id="explanation-title"></h3>
+                            <p class="explanation-text" id="explanation-text"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-controls">
+                    <button class="next-btn" id="next-btn" disabled>ඊළඟ ප්‍රශ්නය</button>
+                </div>
+            </div>
+
+            <div class="result-screen" id="result-screen" style="display: none;">
+                <div class="result-card">
+                    <h2 class="result-title">විභාගය සම්පූර්ණයි!</h2>
+                    <div class="result-animation">
+                        <div class="trophy-icon">🏆</div>
+                    </div>
+                    <div class="score-summary">
+                        <div class="final-score" id="final-score">0/10</div>
+                        <div class="percentage" id="percentage">0%</div>
+                    </div>
+                    <div class="result-message" id="result-message">Great job!</div>
+                    <button class="retry-btn" id="retry-btn">නැවත උත්සාහ කරන්න</button>
+                    <button class="home-btn-large" id="home-btn-large">වර්ග භාන්ද ආරම්භයට යන්න</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="quiz-data.js"></script>
+    <script src="quiz.js"></script>
+</body>
+</html>
